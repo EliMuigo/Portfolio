@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/17c35b8f3f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="/Elly-design-logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Data Analyst</p>
+                <h1>Hi,I'm <span>Elishiba</span> from Kenya </h1>
+            </div>
+        </div>
+    </div>
+    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/Elishiba.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me </h1>
+                    <p>I'm currently a student at Kenyatta University pursuing
+                        Bachelors in Information Technology.Moreover I've specialised in 
+                        data science. I'm passionate in analysing big data to come up with solutions
+                        and train models for better visualization.I can offer both hard skills
+                        and soft skills.My goal is to become one of the best data analysts in the 
+                        country. </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skils</p>
+                            <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+
+
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Data Scientist</span><br>Analysing Data</li>
+                                <li><span>Front-end Developer</span><br>Web Development</li>
+                                <li><span>App Development</span><br>Building Android</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2023-Current</span><br>self taught data scientist</li>
+                                <li><span>2022</span><br>Web-Development</li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <li><span>2023-Current</span><br>A Bachelor's degree student</li>
+                            <li><span>2017-2021</span><br>Highschool</li>
+                            <li><span>-2016</span><br>Primary School</li>
+
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------Services--------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Data Scientist</h2>
+                    <p>can be intellectually challenging, analytically satisfying,<br>
+                         and put you at the forefront of new advances in technology</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Front-end Developer </h2>
+                    <p>I get to work on a variety of interesting things.<br>
+                         Impact: Front end development work is seen by everyone who interacts with a brand.</p>
+                    <a href="">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Developer</h2>
+                    <p>By learning Android Development, I give yourself the best possible chance to reach any career goals you set. Once you get started,<br>
+                         </p>
+                    <a href="">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------portfolio--------->
+    <div id="portfolio">
+        <div class="portfolio-contain">
+            <video autoplay loop muted>
+                <source src="/Pexels Videos.mp4" type="video/mp4">
+            </video>
+            <div class="text-box">
+                <h2 class="data-sub">Data Science</h2>
+            </div>
+        </div>  
+    </div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+        
+
+    </script>
+    
+</body>
+</html>
