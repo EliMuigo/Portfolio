@@ -183,7 +183,7 @@ nav ul li a:hover::after{
 .text-box{
     align-items: center;
 }
-.text-box div data-sub{
+.text-box div {
     position: absolute;
     top: 0;
     left: 0;
