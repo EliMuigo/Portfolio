@@ -168,34 +168,159 @@ nav ul li a:hover::after{
     transform:translateY(-10px) ;
 }
 /*---------portfolio--------*/
-#portfolio{
-    padding: 50px 0;
-}
+
 .portfolio-contain{
     width: 100%;
     height: 100vh;
-    position: center;
+    position:left;
 }
 .portfolio-contain video{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
 }
-.text-box{
+
+.portfolio-contain.tables-links table,th,td{
+    width:500px;
+    height:200px;
+    justify-content: space-evenly;
     align-items: center;
+    text-align: center;
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-right: 20px;
+    border:1px solid #fff;
+    padding: 10px;
+    border-collapse: collapse;
+    border-radius: 20px;
+    background: linear-gradient(135deg,#00feba,#5b548a);
 }
-.text-box div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background:#000 ;
-    height: 100%;
-    width: 100%;
+.tables-links table,th,td:hover{
+    background:#7700ff;
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+.tables-links table,caption{
+    font-size: 30px;
+    font-weight: 100;
+}
+.tables-links , th{
+    font-size: 20px;
+    background: black;
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 100px;
-    font-weight: 900;
-    mix-blend-mode: multiply;
+}
+.contact-left{
+    flex-basis: 30%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top:30px ;
+}
+.contact-left p i{
+    color: #7700ff;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration:none ;
+    font-size: 30px;
+    margin-right:15px ;
+    color:#ff004f ;
+    display: inline-block;
+    transition:0.5s;
+}
+.social-icons a:hover{
+    color:#7700ff;
+    transform: translateY(-5px);
+}
+.btn.btn3{
+    background: #ff004f;
+    font-size: 25px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.contact-right form{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background:#262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #7700ff;
+    font-size: 18px;
+    border-radius: 6px;
 
 }
+form.btn3{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/*------responsive-----*/
+nav.fas{
+    display: none;
+}
+@media only screen and (max-width:600px){
+    #header{
+        background-image:url(/Eli/Elishiba.jpeg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav.fs{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background:#ff004f;
+        position:fixed;
+        top:0;
+        right:-200px;
+        width:100vh;
+        padding-top:50px;
+        z-index: 2;
+        transition: right 0.5s;
+        }
+        nav ul li{
+            display: block;
+            margin: 25px;
+        }
+        nav ul .fas{
+            position: absolute;
+            cursor: pointer;
+            top:25px;
+            left:25px;
+        }
+        .sub-title{
+            font-size: 40px;
+        }
+        .about-col-1 , .about-col-2{
+            flex-basis: 100%;
+        }
+        .about-col-1{
+            margin-bottom:30px ;
+        }
+        .about-col-2{
+            font-size: 14px;
+        }
+        .tab-links{
+            font-size:14px ;
+            margin-right: 20px;
+        }
+    }
+
+
